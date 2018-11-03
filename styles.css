@@ -41,12 +41,16 @@ h1 {
   margin: 10px 0 0 0;
   font-size: 2em;
 }
+p{
+  opacity: 0;
+}
 
 canvas {
+  position: absolute;
   margin-bottom: 40px;
-  background: #ececec;
   width: 600px;
   max-width: 100%;
+  overflow: auto;
 }
 
 .filter-buttons button,
