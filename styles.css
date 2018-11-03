@@ -4,6 +4,16 @@
   box-sizing: border-box;
   outline: none;
 }
+#mydiv {
+    position: absolute;
+    z-index: 9;
+    text-align: center;
+    resize: both;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0);
+
+
+}
 .tbox{
     position: absolute;
     border: 0px solid;
