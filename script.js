@@ -39,6 +39,8 @@ $(document).ready(function() {
   });
   $("#reset").on("click",function(e){
     ctx.drawImage(img,0,0,img.width,img.height);
+    document.getElementById("inp").value = "";
+    ct.clearRect(0,0,canvas2.width,canvas2.height);
   });
   $("#upload-file").on("change", function() {
     var file = document.querySelector("#upload-file").files[0];

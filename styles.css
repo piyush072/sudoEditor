@@ -47,11 +47,10 @@ p{
 
 canvas {
   position: absolute;
-  padding: inherit;
   margin-bottom: 40px;
   width: 600px;
   max-width: 100%;
-  overflow: auto;
+
 }
 
 .filter-buttons button,
