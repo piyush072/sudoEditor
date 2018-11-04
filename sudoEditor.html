@@ -19,25 +19,37 @@
   <button id="merge" name="button">Merge</button>
   <button type="button" id="reset" name="button">Reset</button>
 </div>
+<br>
+
+
+<h5>Position</h5>
 <div class="pos">
   <div class="slidecontainer">
   <input type="range" min="1" max="250" value="50" class="slider" id="x" onclick="newfn()">
-</div>
-<div class="slidecontainer">
   <input type="range" min="1" max="150" value="50" class="slider" id="y" onclick="newfn()">
 </div>
+</div>
+<br>
+<h5>Font Size</h5>
 <input type="range" min="1" max="250" value="20" class="slider" id="z" onclick="newfn()">
 <br>
+<h5>Color</h5>
 <input type="text" id="clr" name="" value="#000000" oninput="newfn()">
   <br>
-
+  <select id="fstyle" onclick="newfn()">
+    <option value="Arial">Arial</option>
+    <option value="Verdana">Verdana</option>
+    <option value="Times New Roman">Times New Roman</option>
+    <option value="Courier New">Courier New</option>
+    <option value="serif">serif</option>
+    <option value="sans-serif">sans-serif</option>
+  </select>
+<h5>Input Text</h5>
     <textarea id="inp" rows="3" cols="20" oninput="newfn()"></textarea>
-
     <div id="mydiv">
         <p id="set"></p>
     </div>
 
-</div>
 <div class="preview-wrapper">
 <canvas id="canvas"></canvas>
 <canvas id="canvas2"></canvas>
