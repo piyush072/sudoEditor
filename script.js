@@ -7,8 +7,6 @@ var ct = canvas2.getContext("2d");
 function newfn(){
 ct.clearRect(0,0,canvas2.width,canvas2.height)
 var inp = document.getElementById("inp").value;
-var q = document.getElementById("set");
-q.innerHTML = inp.value;
 var x=document.getElementById("x").value;
 var y=document.getElementById("y").value;
 var z = document.getElementById("z").value;
@@ -23,6 +21,8 @@ $(document).ready(function() {
   var x=document.getElementById("x").value;
   var y=document.getElementById("y").value;
   var z = document.getElementById("z").value;
+  var clr = document.getElementById("clr");
+  ctx.fillStyle = clr.value;
   ctx.font = z+"px Arial";
   ctx.fillText(inp,x,y);
 
@@ -34,7 +34,9 @@ $(document).ready(function() {
     }
     download(canvas, actualName + "-edited.jpg");
   });
-
+  $("#reset").on("click",function(e){
+    ctx.drawImage(img,0,0,img.width,img.height);
+  });
   $("#upload-file").on("change", function() {
     var file = document.querySelector("#upload-file").files[0];
     var reader = new FileReader();
