@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/camanjs/4.1.2/caman.full.min.js'>
+  </script>
+  <script src='https://code.jquery.com/jquery-2.1.3.min.js'>
+
+  </script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+  <body>
+    <div class="jumbotron">
+
+      <h1>sudoEditor</h1>
+    </div>
+<div class="container">
+
+<div class="editor-buttons">
+  <input type="file" id="upload-file" placeholder="Upload a Picture" />
+  <label for="upload-file">Upload a Picture</label>
+  <button id="merge" name="button">Merge</button>
+  <button id="download-btn">Download Image</button>
+  <button type="button" id="reset" name="button">Reset</button>
+</div>
+<br>
+
+
+<h5>Position</h5>
+<div class="pos">
+  <div class="slidecontainer">
+  <input type="range" min="1" max="250" value="50" class="slider" id="x" onclick="newfn()">
+  <input type="range" min="1" max="150" value="50" class="slider" id="y" onclick="newfn()">
+</div>
+</div>
+<br>
+<h5>Font Size</h5>
+<input type="range" min="1" max="250" value="20" class="slider" id="z" onclick="newfn()">
+<br>
+<h5>Color</h5>
+<input type="text" id="clr" name="" value="#000000" oninput="newfn()">
+  <br>
+  <select id="fstyle" onclick="newfn()">
+    <option value="Arial">Arial</option>
+    <option value="Verdana">Verdana</option>
+    <option value="Times New Roman">Times New Roman</option>
+    <option value="Courier New">Courier New</option>
+    <option value="serif">serif</option>
+    <option value="sans-serif">sans-serif</option>
+  </select>
+<h5>Input Text</h5>
+    <textarea id="inp" rows="3" cols="20" oninput="newfn()"></textarea>
+    <div id="mydiv">
+        <p id="set"></p>
+    </div>
+    <br>
+
+<div class="preview-wrapper">
+<canvas id="canvas"></canvas>
+<canvas id="canvas2"></canvas>
+<canvas id="canvas3"></canvas>
+</div>
+
+</div>
+  </body>
+  <script src="script.js"></script>
+</html>
